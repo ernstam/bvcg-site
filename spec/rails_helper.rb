@@ -54,4 +54,8 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  
+  # Possible fix for undefined method error
+  #see http://stackoverflow.com/questions/8862967/visit-method-not-found-in-my-rspec
+  config.include Capybara::DSL
 end
